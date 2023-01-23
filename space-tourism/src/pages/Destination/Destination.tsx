@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PageTitle } from '../../components/PageTitle';
 import { SecondaryNavItem } from '../../components/SecondaryNavItem';
 import { SecondaryTitle } from '../../components/SecondaryTitle';
 import { useGetData } from '../../hooks/useGetData';
@@ -14,13 +15,8 @@ export const Destination = () => {
   );
 
   return (
-    <div className="flex flex-col gap-8 md:gap-14 lg:gap-24 mt-6 md:mt-10  px-9 lg:px-40">
-      <div className="flex gap-7 ">
-        <span className="text-tertiary-100 opacity-25 tracking-[4.72px] text-3xl font-bold">
-          01
-        </span>
-        <SecondaryTitle text="pick your destination" color="tertiary-100" />
-      </div>
+    <div className="flex flex-col gap-8 md:gap-14 lg:gap-24 mt-8 md:mt-10  px-9 lg:px-40">
+      <PageTitle text="pick your destination" number="01" />
       <main className="flex flex-col lg:flex-row h-full w-full md:gap-12 lg:gap-36   justify-between">
         <section className="flex flex-col gap-8 md:gap-14 lg:gap-24 flex-grow flex-shrink-0 ">
           {/* image with src according to state */}

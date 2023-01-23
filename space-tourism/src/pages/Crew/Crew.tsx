@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { PageTitle } from '../../components/PageTitle';
 import { SecondaryTitle } from '../../components/SecondaryTitle';
 import { SmallToggle } from '../../components/SmallToggle';
 import { useGetData } from '../../hooks/useGetData';
@@ -22,12 +23,7 @@ export const Crew = () => {
   };
   return (
     <div className="h-full flex flex-col gap-8 md:gap-14 lg:gap-24 mt-6 md:mt-10 lg:mt-20 px-6 md:px-40 lg:px-auto">
-      <div className="flex gap-4 justify-center mx-auto md:mx-0 md:justify-start items-center">
-        <span className="text-tertiary-100 opacity-25 tracking-[4.72px] font-bold">
-          02
-        </span>
-        <SecondaryTitle text="meet your crew" color="tertiary-100" />
-      </div>
+      <PageTitle text="Meet the Crew" number="02" />
       <main className="flex flex-col md:flex-col-reverse lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16   justify-between">
         <section className="grid place-content-center  lg:place-content-end border-b border-solid border-['rgba(56, 59, 75, 1)']">
           <img

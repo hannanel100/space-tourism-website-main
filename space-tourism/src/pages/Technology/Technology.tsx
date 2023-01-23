@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { LargeToggle } from '../../components/LargeToggle';
+import { PageTitle } from '../../components/PageTitle';
 import { SecondaryTitle } from '../../components/SecondaryTitle';
 import { useGetData } from '../../hooks/useGetData';
 
@@ -32,12 +33,7 @@ export const Technology = () => {
   };
   return (
     <div className="flex-grow h-full flex flex-col gap-8 md:gap-14 lg:pl-40 pt-10">
-      <div className="flex gap-4 justify-center mx-auto md:mx-10 lg:mx-0 md:justify-start items-center">
-        <span className="text-tertiary-100 opacity-25 tracking-[4.72px] font-bold text-3xl">
-          03
-        </span>
-        <SecondaryTitle text="space launch 101" color="tertiary-100" />
-      </div>
+      <PageTitle text="space launch 101" number="03" />
       <main className="flex flex-col  lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16   justify-between md:justify-start">
         <section className="grid place-content-center lg:w-full border-b border-solid border-['rgba(56, 59, 75, 1)']">
           <img
