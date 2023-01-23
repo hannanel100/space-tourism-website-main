@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import * as T from '../types/data';
 
 const getData = async (): Promise<T.data> => {
-  const res = await fetch('/data.json');
+  const res = await fetch('data/data.json');
   const data: T.data = await res.json();
   return data;
 };
