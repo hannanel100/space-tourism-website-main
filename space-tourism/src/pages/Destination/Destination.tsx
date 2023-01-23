@@ -14,7 +14,7 @@ export const Destination = () => {
   );
 
   return (
-    <div className="flex flex-col gap-8 md:gap-14 lg:gap-24 mt-6 md:mt-10 lg:mt-20 px-9 lg:px-40">
+    <div className="flex flex-col gap-8 md:gap-14 lg:gap-24 mt-6 md:mt-10  px-9 lg:px-40">
       <div className="flex gap-7 ">
         <span className="text-tertiary-100 opacity-25 tracking-[4.72px] text-3xl font-bold">
           01

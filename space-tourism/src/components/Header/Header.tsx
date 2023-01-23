@@ -9,7 +9,7 @@ export const Header = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="48"
           height="48"
-          className="absolute top-6 left-6 lg:top-8 md:top-2 lg:left-14 md:left-10"
+          className="absolute top-6 left-6 lg:top-8 md:top-6 lg:left-14 md:left-10"
         >
           <g fill="none" fillRule="evenodd">
             <circle cx="24" cy="24" r="24" fill="#FFF" />

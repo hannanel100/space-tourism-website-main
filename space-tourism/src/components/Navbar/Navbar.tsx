@@ -8,8 +8,8 @@ export const Navbar = () => {
   const navbarItems = ['home', 'destination', 'crew', 'technology'];
   const navbarItemsPath = ['/', '/destination', '/crew', '/technology'];
   return (
-    <div className="w-full flex justify-start items-center flex-row-reverse flex-grow z-10 relative">
-      <nav className="hidden sm:flex h-[60px] md:h-full w-2/3 gap-32 flex-col justify-center items-end  bg-tertiary-900 text-tertiary-100">
+    <div className="w-full flex justify-start items-center flex-row-reverse flex-grow z-10 relative lg:pt-10">
+      <nav className="hidden sm:flex md:h-[96px] w-2/3 gap-32 flex-col justify-center items-end  bg-tertiary-900 text-tertiary-100">
         <ul className="hidden sm:flex gap-8 justify-center items-center h-full lg:pr-20 md:pr-11">
           {navbarItems.map((item, index) => (
             <li
