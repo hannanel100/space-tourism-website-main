@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/space-tourism-multipage-website-Hw_Cm5mtAZ](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-Hw_Cm5mtAZ)
+- Live Site URL: [https://space-tourism-h15m.onrender.com](https://space-tourism-h15m.onrender.com)
 
 ## My process
 
@@ -43,10 +43,10 @@ Users should be able to:
 - Semantic HTML5 markup
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Typescript]('https://www.typescriptlang.org/') - As the language
-- [vite]('https://vitejs.dev/') - As the bundler
+- [Typescript](https://www.typescriptlang.org/) - As the language
+- [vite](https://vitejs.dev/) - As the bundler
 - [tailwindcss](https://tailwindcss.com/) - For styles
-- [@tanstack/react-query]('https://tanstack.com/query/v4/docs/react/overview') - For data fetching
+- [@tanstack/react-query](https://tanstack.com/query/v4/docs/react/overview) - For data fetching
 
 ### What I learned
 
