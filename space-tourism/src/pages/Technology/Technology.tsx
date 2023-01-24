@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { LargeToggle } from '../../components/LargeToggle';
 import { PageTitle } from '../../components/PageTitle';
-import { SecondaryTitle } from '../../components/SecondaryTitle';
+import { PageWrapper } from '../../components/PageWrapper';
 import { useGetData } from '../../hooks/useGetData';
 
 // export interface TechnologyProps {}
@@ -32,9 +32,9 @@ export const Technology = () => {
     setIsActive(newIsActive);
   };
   return (
-    <div className="flex-grow h-full flex flex-col gap-8 md:gap-14 lg:pl-40 pt-10">
-      <PageTitle text="space launch 101" number="03" />
-      <main className="flex flex-col  lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16   justify-between md:justify-start">
+    <PageWrapper>
+      <PageTitle text="space launch 101" number="03" className="lg:px-40" />
+      <main className="flex flex-col  lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16   justify-between md:justify-start lg:pl-40">
         <section className="grid place-content-center lg:w-full border-b border-solid border-['rgba(56, 59, 75, 1)']">
           <img
             src={
@@ -44,16 +44,16 @@ export const Technology = () => {
                 ? technology[currentTechnology]?.images.portrait
                 : undefined
             }
-            className={`w-full md:w-fit lg:w-[568px]`}
+            className={`w-screen md:w-fit lg:w-[568px]`}
           />
         </section>
-        <section className="px-6 md:px-40 lg:px-0 flex flex-col lg:flex-row lg:justify-center items-center gap-4 lg:gap-20 pb-20">
+        <section className="px-6 md:px-40 lg:px-0 flex flex-col lg:flex-row lg:justify-center items-center gap-4 md:gap-11 lg:gap-20 pb-20">
           <LargeToggle
             isActive={isActive}
             changeTechnologyHandler={changeTechnologyHandler}
           />
 
-          <div className="flex flex-col gap-3 lg:items-start">
+          <div className="flex flex-col gap-4 lg:items-start">
             <h3 className="font-sans text-secondary text-sm md:text-base text-center uppercase">
               The Terminology...
             </h3>
@@ -68,6 +68,6 @@ export const Technology = () => {
           </div>
         </section>
       </main>
-    </div>
+    </PageWrapper>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PageTitle } from '../../components/PageTitle';
-import { SecondaryTitle } from '../../components/SecondaryTitle';
+import { PageWrapper } from '../../components/PageWrapper';
 import { SmallToggle } from '../../components/SmallToggle';
 import { useGetData } from '../../hooks/useGetData';
 // export interface CrewProps {}
@@ -22,9 +22,9 @@ export const Crew = () => {
     setIsActive(newIsActive);
   };
   return (
-    <div className="h-full flex flex-col gap-8 md:gap-14 lg:gap-24 mt-6 md:mt-10 lg:mt-20 px-6 md:px-40 lg:px-auto">
-      <PageTitle text="Meet the Crew" number="02" />
-      <main className="flex flex-col md:flex-col-reverse lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16   justify-between">
+    <PageWrapper>
+      <PageTitle text="Meet the Crew" number="02" className="lg:px-40" />
+      <main className="flex flex-col md:flex-col-reverse lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16 px-6 md:px-36 lg:px-40  justify-between">
         <section className="grid place-content-center  lg:place-content-end border-b border-solid border-['rgba(56, 59, 75, 1)']">
           <img
             src={
@@ -53,7 +53,7 @@ export const Crew = () => {
               id="name"
               className="text-tertiary-100 text-2xl text-center uppercase font-serif mb-4 lg:text-start lg:text-[56px]"
             >
-              {crewMembers && crewMembers[currentCrewMember].name}{' '}
+              {crewMembers && crewMembers[currentCrewMember].name}
             </h2>
             <p
               id="bio"
@@ -64,6 +64,6 @@ export const Crew = () => {
           </div>
         </section>
       </main>
-    </div>
+    </PageWrapper>
   );
 };

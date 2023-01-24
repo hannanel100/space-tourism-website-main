@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PageTitle } from '../../components/PageTitle';
+import { PageWrapper } from '../../components/PageWrapper';
 import { SecondaryNavItem } from '../../components/SecondaryNavItem';
 import { SecondaryTitle } from '../../components/SecondaryTitle';
 import { useGetData } from '../../hooks/useGetData';
@@ -15,9 +16,13 @@ export const Destination = () => {
   );
 
   return (
-    <div className="flex flex-col gap-8 md:gap-14 lg:gap-24 mt-8 md:mt-10  px-9 lg:px-40">
-      <PageTitle text="pick your destination" number="01" />
-      <main className="flex flex-col lg:flex-row h-full w-full md:gap-12 lg:gap-36   justify-between">
+    <PageWrapper>
+      <PageTitle
+        text="pick your destination"
+        number="01"
+        className="lg:px-40"
+      />
+      <main className="flex flex-col lg:flex-row h-full w-full md:gap-12 lg:gap-36  px-6 md:px-9 lg:px-40 justify-between">
         <section className="flex flex-col gap-8 md:gap-14 lg:gap-24 flex-grow flex-shrink-0 ">
           {/* image with src according to state */}
           <img
@@ -43,7 +48,7 @@ export const Destination = () => {
           <h3 className="text-tertiary-100 text-6xl md:text-7xl lg:text-8xl uppercase font-serif text-center lg:text-start">
             {destination}
           </h3>
-          <p className="text-secondary text-sm md:text-base lg:text-lg font-sans border-b border-[#383B4B] pb-14  text-center lg:text-start">
+          <p className="text-secondary text-sm md:text-base lg:text-lg font-sans border-b border-[#383B4B] pb-14 md:px-24  text-center lg:text-start">
             {
               data?.destinations?.find(
                 (destinationOption) =>
@@ -87,6 +92,6 @@ export const Destination = () => {
           </div>
         </section>
       </main>
-    </div>
+    </PageWrapper>
   );
 };
