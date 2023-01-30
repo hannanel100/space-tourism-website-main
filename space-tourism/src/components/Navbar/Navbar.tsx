@@ -9,7 +9,7 @@ export const Navbar = () => {
   const navbarItemsPath = ['/', '/destination', '/crew', '/technology'];
   return (
     <div className="w-full flex justify-start items-center flex-row-reverse flex-grow z-10 relative lg:pt-10">
-      <nav className="hidden sm:flex md:h-[96px] w-2/3 gap-32 flex-col justify-center items-end  bg-tertiary-900 text-tertiary-100">
+      <nav className="hidden sm:flex md:h-[96px] w-2/3 gap-32 flex-col justify-center items-end  bg-tertiary-900 text-tertiary-100 backdrop-filter backdrop-blur-lg bg-opacity-30">
         <ul className="hidden sm:flex gap-8 justify-center items-center h-full lg:pr-20 md:pr-11">
           {navbarItems.map((item, index) => (
             <li
@@ -19,7 +19,10 @@ export const Navbar = () => {
                 'border-b-2 border-solid border-tertiary-100'
               }`}
             >
-              <Link to={navbarItemsPath[index]} className="self-center">
+              <Link
+                to={navbarItemsPath[index]}
+                className="self-center text-base tracking-[2.7px] leading-[19.2px]"
+              >
                 <span className="font-bold  mr-[14px] md:hidden lg:inline">
                   {index < 9 ? `0${index + 1}` : index + 1}
                 </span>
