@@ -11,7 +11,7 @@ export const Button = ({ size, text }: ButtonProps) => {
   };
   return (
     <button
-      className={`${sizeClass[size]} bg-tertiary-100 text-primary  rounded-full  ring-[#979797] hover:ring-[88px] transition ease-in-out duration-150 uppercase`}
+      className={`${sizeClass[size]} bg-tertiary-100 text-primary font-serif tracking-[2px] rounded-full  ring-[#979797] hover:ring-[88px] transition ease-in-out duration-150 uppercase`}
     >
       {text}
     </button>
