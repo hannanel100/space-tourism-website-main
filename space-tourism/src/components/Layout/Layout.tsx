@@ -15,7 +15,7 @@ export const Layout = () => {
     <div
       className={`flex flex-col ${
         pathname === '/' && 'justify-between'
-      } min-h-screen md:h-full bg-repeat-y md:bg-no-repeat bg-cover bg-center`}
+      } min-h-screen bg-cover bg-center bg-repeat-y md:h-full md:bg-no-repeat`}
     >
       <style>
         {`

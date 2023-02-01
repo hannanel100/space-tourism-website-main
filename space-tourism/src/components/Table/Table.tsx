@@ -1,8 +1,5 @@
 export interface TableProps {}
 
 export const Table = (props: TableProps) => {
-	
-	return (
-		<div></div>
-	);
+  return <div></div>;
 };

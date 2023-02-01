@@ -3,13 +3,13 @@ import { Navbar } from '../Navbar';
 
 export const Header = () => {
   return (
-    <header className="flex justify-between lg:items-baseline md:items-start ">
-      <section className="relative w-12 h-12 flex-shrink">
+    <header className="flex justify-between md:items-start lg:items-baseline ">
+      <section className="relative h-12 w-12 flex-shrink">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="48"
           height="48"
-          className="absolute top-6 left-6 lg:top-8 md:top-6 lg:left-14 md:left-10"
+          className="absolute top-6 left-6 md:top-6 md:left-10 lg:top-8 lg:left-14"
         >
           <g fill="none" fillRule="evenodd">
             <circle cx="24" cy="24" r="24" fill="#FFF" />
@@ -20,7 +20,7 @@ export const Header = () => {
           </g>
         </svg>
       </section>
-      <section className="flex-grow z-10">
+      <section className="z-10 flex-grow">
         <Navbar />
       </section>
     </header>

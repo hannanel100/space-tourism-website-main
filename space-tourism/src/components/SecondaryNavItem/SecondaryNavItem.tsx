@@ -14,9 +14,9 @@ export const SecondaryNavItem = ({
     <li
       className={`${
         isChosen
-          ? 'text-tertiary-100 border-b-2 border-b-tertiary-100 border-solid'
+          ? 'border-b-2 border-solid border-b-tertiary-100 text-tertiary-100'
           : 'text-secondary'
-      } cursor-pointer uppercase font-sans pb-2 hover:border-b-tertiary-100 hover:border-opacity-50 hover:border-b-2 hover:border-solid`}
+      } cursor-pointer pb-2 font-sans uppercase hover:border-b-2 hover:border-solid hover:border-b-tertiary-100 hover:border-opacity-50`}
       onClick={() => setDestination(text as Destination)}
     >
       {text}

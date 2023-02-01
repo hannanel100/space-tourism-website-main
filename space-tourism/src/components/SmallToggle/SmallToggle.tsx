@@ -5,33 +5,33 @@ export interface SmallToggleProps {
 
 export const SmallToggle = (props: SmallToggleProps) => {
   return (
-    <div className="flex gap-4 justify-center lg:items-start mx-auto lg:mx-0 mb-20">
+    <div className="mx-auto mb-20 flex justify-center gap-4 lg:mx-0 lg:items-start">
       <div
         id="0"
-        className={`w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full bg-tertiary-100 ${
+        className={`h-[10px] w-[10px] rounded-full bg-tertiary-100 lg:h-[15px] lg:w-[15px] ${
           props.isActive[0] ? 'opacity-1' : 'opacity-[0.17]'
-        } hover:opacity-50 cursor-pointer`}
+        } cursor-pointer hover:opacity-50`}
         onClick={props.changeCrewMemberHandler}
       />
       <div
         id="1"
-        className={`w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full bg-tertiary-100 ${
+        className={`h-[10px] w-[10px] rounded-full bg-tertiary-100 lg:h-[15px] lg:w-[15px] ${
           props.isActive[1] ? 'opacity-1' : 'opacity-[0.17]'
-        } hover:opacity-50 cursor-pointer`}
+        } cursor-pointer hover:opacity-50`}
         onClick={props.changeCrewMemberHandler}
       />
       <div
         id="2"
-        className={`w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full bg-tertiary-100 ${
+        className={`h-[10px] w-[10px] rounded-full bg-tertiary-100 lg:h-[15px] lg:w-[15px] ${
           props.isActive[2] ? 'opacity-1' : 'opacity-[0.17]'
-        } hover:opacity-50 cursor-pointer`}
+        } cursor-pointer hover:opacity-50`}
         onClick={props.changeCrewMemberHandler}
       />
       <div
         id="3"
-        className={`w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full bg-tertiary-100 ${
+        className={`h-[10px] w-[10px] rounded-full bg-tertiary-100 lg:h-[15px] lg:w-[15px] ${
           props.isActive[3] ? 'opacity-1' : 'opacity-[0.17]'
-        } hover:opacity-50 cursor-pointer`}
+        } cursor-pointer hover:opacity-50`}
         onClick={props.changeCrewMemberHandler}
       />
     </div>

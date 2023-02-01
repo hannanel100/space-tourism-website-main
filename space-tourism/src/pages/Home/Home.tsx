@@ -11,11 +11,11 @@ export const Home = () => {
     width: '(min-width: 1440px)',
   });
   return (
-    <main className="text-secondary flex flex-col lg:flex-row justify-between px-6 pb-5 md:px-40 md:pb-32 pt-6 lg:items-end items-center w-full gap-20 ">
-      <section className="flex flex-col justify-center lg:items-start items-center">
+    <main className="flex w-full flex-col items-center justify-between gap-20 px-6 pb-5 pt-6 text-secondary md:px-40 md:pb-32 lg:flex-row lg:items-end ">
+      <section className="flex flex-col items-center justify-center lg:items-start">
         <SecondaryTitle text="So, You want to travel to" color="secondary" />
         <div className="lg:max-w-[470px]">
-          <h1 className="text-center lg:text-start font-serif text-tertiary-100 md:text-[150px] flex-0 text-[80px] uppercase">
+          <h1 className="flex-0 text-center font-serif text-[80px] uppercase text-tertiary-100 md:text-[150px] lg:text-start">
             Space
           </h1>
           <p className="text-center lg:text-start">

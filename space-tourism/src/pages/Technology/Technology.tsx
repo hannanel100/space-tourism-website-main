@@ -34,8 +34,8 @@ export const Technology = () => {
   return (
     <PageWrapper>
       <PageTitle text="space launch 101" number="03" className="lg:px-40" />
-      <main className="flex flex-col  lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16   justify-between md:justify-start lg:pl-40">
-        <section className="grid place-content-center lg:w-full border-b border-solid border-['rgba(56, 59, 75, 1)']">
+      <main className="flex h-full  w-full flex-col justify-between gap-8 md:justify-start md:gap-12   lg:flex-row-reverse lg:gap-16 lg:pl-40">
+        <section className="border-['rgba(56, 59, 75, 1)'] grid place-content-center border-b border-solid lg:w-full">
           <img
             src={
               technology && width < 1024
@@ -47,20 +47,20 @@ export const Technology = () => {
             className={`w-screen md:w-fit lg:w-[568px]`}
           />
         </section>
-        <section className="px-6 md:px-40 lg:px-0 flex flex-col lg:flex-row lg:justify-center items-center gap-4 md:gap-11 lg:gap-20 pb-20">
+        <section className="flex flex-col items-center gap-4 px-6 pb-20 md:gap-11 md:px-40 lg:flex-row lg:justify-center lg:gap-20 lg:px-0">
           <LargeToggle
             isActive={isActive}
             changeTechnologyHandler={changeTechnologyHandler}
           />
 
           <div className="flex flex-col gap-4 lg:items-start">
-            <h3 className="font-sans text-secondary text-sm md:text-base text-center uppercase">
+            <h3 className="text-center font-sans text-sm uppercase text-secondary md:text-base">
               The Terminology...
             </h3>
-            <h2 className="text-tertiary-100 text-2xl text-center uppercase font-serif md:text-[40px]  lg:text-start lg:text-[56px]">
+            <h2 className="text-center font-serif text-2xl uppercase text-tertiary-100 md:text-[40px]  lg:text-start lg:text-[56px]">
               {technology ? technology[currentTechnology]?.name : undefined}
             </h2>
-            <p className="font-sans2 text-secondary text-center lg:text-start ">
+            <p className="text-center font-sans2 text-secondary lg:text-start ">
               {technology
                 ? technology[currentTechnology]?.description
                 : undefined}

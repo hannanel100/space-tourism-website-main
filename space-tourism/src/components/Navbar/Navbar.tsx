@@ -8,22 +8,22 @@ export const Navbar = () => {
   const navbarItems = ['home', 'destination', 'crew', 'technology'];
   const navbarItemsPath = ['/', '/destination', '/crew', '/technology'];
   return (
-    <div className="w-full flex justify-start items-center flex-row-reverse flex-grow z-10 relative lg:pt-10">
-      <nav className="hidden sm:flex md:h-[96px] w-2/3 gap-32 flex-col justify-center items-end  bg-tertiary-900 text-tertiary-100 backdrop-filter backdrop-blur-lg bg-opacity-30">
-        <ul className="hidden sm:flex gap-8 justify-center items-center h-full lg:pr-20 md:pr-11">
+    <div className="relative z-10 flex w-full flex-grow flex-row-reverse items-center justify-start lg:pt-10">
+      <nav className="hidden w-2/3 flex-col items-end justify-center gap-32 bg-tertiary-900 bg-opacity-30  text-tertiary-100 backdrop-blur-lg backdrop-filter sm:flex md:h-[96px]">
+        <ul className="hidden h-full items-center justify-center gap-8 sm:flex md:pr-11 lg:pr-20">
           {navbarItems.map((item, index) => (
             <li
               key={index}
-              className={`flex flex-col  h-full justify-center tracking-[2.7px] md:tracking-[2.36px] md:text-sm ${
+              className={`flex h-full  flex-col justify-center tracking-[2.7px] md:text-sm md:tracking-[2.36px] ${
                 location.pathname === navbarItemsPath[index] &&
                 'border-b-2 border-solid border-tertiary-100'
               }`}
             >
               <Link
                 to={navbarItemsPath[index]}
-                className="self-center text-base tracking-[2.7px] leading-[19.2px]"
+                className="self-center text-base leading-[19.2px] tracking-[2.7px]"
               >
-                <span className="font-bold  mr-[14px] md:hidden lg:inline">
+                <span className="mr-[14px]  font-bold md:hidden lg:inline">
                   {index < 9 ? `0${index + 1}` : index + 1}
                 </span>
                 {item.toUpperCase()}
@@ -33,33 +33,33 @@ export const Navbar = () => {
         </ul>
       </nav>
       <nav
-        className={`sm:hidden  transition ease-in-out transform duration-100 z-10  absolute top-0 right-0 ${
+        className={`absolute  top-0 right-0 z-10 transform transition  duration-100 ease-in-out sm:hidden ${
           isOpen && 'backdrop-blur-2xl'
-        }  w-4/5 flex gap-16 flex-col justify-center items-end  text-tertiary-100`}
+        }  flex w-4/5 flex-col items-end justify-center gap-16  text-tertiary-100`}
       >
         {/* hamburger menu */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col justify-center gap-[6px] h-6 pr-6 mt-8"
+          className="mt-8 flex h-6 flex-col justify-center gap-[6px] pr-6"
         >
           <div
-            className={`w-6 h-[3px] bg-secondary  transition ease transform duration-300 ${
-              isOpen && 'rotate-45 translate-y-[9px]'
+            className={`ease h-[3px] w-6  transform bg-secondary transition duration-300 ${
+              isOpen && 'translate-y-[9px] rotate-45'
             }`}
           ></div>
           <div
-            className={`w-6 h-[3px] bg-secondary  transition ease transform duration-300 ${
+            className={`ease h-[3px] w-6  transform bg-secondary transition duration-300 ${
               isOpen && 'opacity-0'
             }`}
           ></div>
           <div
-            className={`w-6 h-[3px] bg-secondary  transition ease transform duration-300 ${
-              isOpen && '-rotate-45 -translate-y-[9px]'
+            className={`ease h-[3px] w-6  transform bg-secondary transition duration-300 ${
+              isOpen && '-translate-y-[9px] -rotate-45'
             }`}
           ></div>
         </button>
         {isOpen && (
-          <ul className="sm:hidden min-h-screen flex flex-col gap-8  pl-8 self-start  transition ease transform duration-100">
+          <ul className="ease flex min-h-screen transform flex-col  gap-8 self-start  pl-8 transition duration-100 sm:hidden">
             {navbarItems.map((item, index) => (
               <li key={index} className={` h-full tracking-[2.7px]`}>
                 <Link
@@ -67,7 +67,7 @@ export const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className="self-center"
                 >
-                  <span className="font-bold  mr-[11px] ">
+                  <span className="mr-[11px]  font-bold ">
                     {index < 9 ? `0${index + 1}` : index + 1}
                   </span>
                   {item.toUpperCase()}

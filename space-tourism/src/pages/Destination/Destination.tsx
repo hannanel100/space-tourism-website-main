@@ -22,18 +22,18 @@ export const Destination = () => {
         number="01"
         className="lg:px-40"
       />
-      <main className="flex flex-col lg:flex-row h-full w-full md:gap-12 lg:gap-36  px-6 md:px-9 lg:px-40 justify-between">
-        <section className="flex flex-col gap-8 md:gap-14 lg:gap-24 flex-grow flex-shrink-0 ">
+      <main className="flex h-full w-full flex-col justify-between px-6 md:gap-12  md:px-9 lg:flex-row lg:gap-36 lg:px-40">
+        <section className="flex flex-shrink-0 flex-grow flex-col gap-8 md:gap-14 lg:gap-24 ">
           {/* image with src according to state */}
           <img
             src={`./assets/destination/image-${destination}.webp`}
             alt="destination"
-            className="w-36 h-36 md:w-72 md:h-72 lg:h-[445px] lg:w-[445px] object-cover mx-auto"
+            className="mx-auto h-36 w-36 object-cover md:h-72 md:w-72 lg:h-[445px] lg:w-[445px]"
           />
         </section>
-        <section className="flex flex-col md:items-center lg:items-start flex-grow gap-4">
+        <section className="flex flex-grow flex-col gap-4 md:items-center lg:items-start">
           {/* a secondary navbar, with options as in type of Destination, a title, some text, and then two elements side by side with distance and time of travel */}
-          <nav className="content-center mx-auto lg:mx-0">
+          <nav className="mx-auto content-center lg:mx-0">
             <ul className="flex gap-9">
               {destinations?.map((destinationOption) => (
                 <SecondaryNavItem
@@ -45,10 +45,10 @@ export const Destination = () => {
               ))}
             </ul>
           </nav>
-          <h3 className="text-tertiary-100 text-6xl md:text-7xl lg:text-8xl uppercase font-serif text-center lg:text-start">
+          <h3 className="text-center font-serif text-6xl uppercase text-tertiary-100 md:text-7xl lg:text-start lg:text-8xl">
             {destination}
           </h3>
-          <p className="text-secondary text-sm md:text-base lg:text-lg font-sans border-b border-[#383B4B] pb-14 md:px-24  text-center lg:text-start">
+          <p className="border-b border-[#383B4B] pb-14 text-center font-sans text-sm text-secondary md:px-24 md:text-base  lg:text-start lg:text-lg">
             {
               data?.destinations?.find(
                 (destinationOption) =>
@@ -59,13 +59,13 @@ export const Destination = () => {
           </p>
           <div
             id="stats"
-            className="flex flex-col md:flex-row justify-center mx-auto pb-6 md:pb-0 md:justify-start gap-8 md:gap-16"
+            className="mx-auto flex flex-col justify-center gap-8 pb-6 md:flex-row md:justify-start md:gap-16 md:pb-0"
           >
             <div className="flex flex-col gap-4">
-              <span className="text-secondary text-sm font-sans uppercase">
+              <span className="font-sans text-sm uppercase text-secondary">
                 avg. distance
               </span>
-              <span className="text-tertiary-100 text-3xl uppercase font-serif">
+              <span className="font-serif text-3xl uppercase text-tertiary-100">
                 {
                   data?.destinations?.find(
                     (destinationOption) =>
@@ -76,10 +76,10 @@ export const Destination = () => {
               </span>
             </div>
             <div className="flex flex-col gap-4">
-              <span className="text-secondary text-sm font-sans uppercase">
+              <span className="font-sans text-sm uppercase text-secondary">
                 est. travel time
               </span>
-              <span className="text-tertiary-100 text-3xl uppercase font-serif">
+              <span className="font-serif text-3xl uppercase text-tertiary-100">
                 {
                   data?.destinations?.find(
                     (destinationOption) =>

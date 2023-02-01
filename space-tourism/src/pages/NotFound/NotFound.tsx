@@ -11,13 +11,13 @@ export const NotFound = () => {
   });
   return (
     // page for 404 route using tailwindcss
-    <main className="text-secondary flex flex-col justify-center items-center gap-24 w-full min-h-full  pt-6">
-      <section className="flex flex-col justify-center items-center gap-20">
-        <h1 className="font-serif text-tertiary-100 md:text-[150px] text-[80px] uppercase">
+    <main className="flex min-h-full w-full flex-col items-center justify-center gap-24 pt-6  text-secondary">
+      <section className="flex flex-col items-center justify-center gap-20">
+        <h1 className="font-serif text-[80px] uppercase text-tertiary-100 md:text-[150px]">
           404
         </h1>
         <h5 className="text-3xl">Page not found</h5>
-        <p className="text-center text-2xl px-6">
+        <p className="px-6 text-center text-2xl">
           Hmm, we can’t seem to find the page you’re looking for. Try again, or
           go back to our homepage.
         </p>
