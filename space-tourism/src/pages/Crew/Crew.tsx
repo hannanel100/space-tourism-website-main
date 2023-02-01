@@ -24,7 +24,7 @@ export const Crew = () => {
   return (
     <PageWrapper>
       <PageTitle text="Meet the Crew" number="02" className="lg:px-40" />
-      <main className="6 flex h-full w-full flex-col justify-between px-6 md:flex-col-reverse md:px-36 lg:flex-row-reverse  lg:px-40">
+      <main className="6 flex h-full w-full flex-col justify-between gap-5 px-6 md:flex-col-reverse md:gap-0 md:px-36 lg:flex-row-reverse  lg:px-40">
         <section className="border-['rgba(56, 59, 75,  1)'] grid place-content-center overflow-clip border-b border-solid lg:flex-1 lg:place-content-end">
           <picture>
             <source
@@ -44,11 +44,11 @@ export const Crew = () => {
               alt={
                 crewMembers ? crewMembers[currentCrewMember].name : undefined
               }
-              className={`mx-auto object-cover md:max-w-[75%] lg:max-w-[90%] `}
+              className={`mx-auto max-w-[50%] object-cover md:max-w-[75%] lg:max-w-[90%] `}
             />
           </picture>
         </section>
-        <section className="flex-0 mx-auto flex max-w-[614px] flex-grow flex-col justify-center gap-2  md:flex-col-reverse md:items-center md:justify-around lg:items-start  lg:justify-between">
+        <section className="flex-0 mx-auto flex max-w-[614px] flex-grow flex-col justify-center gap-8 md:flex-col-reverse  md:items-center md:justify-around md:gap-2 lg:items-start  lg:justify-between">
           {/* 4 circles 10px by 10px */}
           <SmallToggle
             isActive={isActive}
@@ -64,7 +64,7 @@ export const Crew = () => {
             </h3>
             <h2
               id="name"
-              className="mb-4 text-center font-serif text-2xl uppercase text-tertiary-100 lg:text-start lg:text-[56px]"
+              className="text-center font-serif text-2xl uppercase text-tertiary-100 md:mb-4 lg:text-start lg:text-[56px]"
             >
               {crewMembers && crewMembers[currentCrewMember].name}
             </h2>
