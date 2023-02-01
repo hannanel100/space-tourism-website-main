@@ -5,7 +5,7 @@ export interface SmallToggleProps {
 
 export const SmallToggle = (props: SmallToggleProps) => {
   return (
-    <div className="flex gap-4 justify-center lg:items-start mx-auto lg:mx-0 mb-6">
+    <div className="flex gap-4 justify-center lg:items-start mx-auto lg:mx-0 mb-20">
       <div
         id="0"
         className={`w-[10px] lg:w-[15px] h-[10px] lg:h-[15px] rounded-full bg-tertiary-100 ${

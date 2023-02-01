@@ -24,24 +24,37 @@ export const Crew = () => {
   return (
     <PageWrapper>
       <PageTitle text="Meet the Crew" number="02" className="lg:px-40" />
-      <main className="flex flex-col md:flex-col-reverse lg:flex-row-reverse h-full w-full gap-8 md:gap-12 lg:gap-16 px-6 md:px-36 lg:px-40  justify-between">
-        <section className="grid place-content-center  lg:place-content-end border-b border-solid border-['rgba(56, 59, 75, 1)']">
-          <img
-            src={
-              crewMembers
-                ? crewMembers[currentCrewMember].images.webp
-                : undefined
-            }
-            className={`w-44 md:w-fit lg:w-[568px]`}
-          />
+      <main className="flex flex-col md:flex-col-reverse lg:flex-row-reverse h-full w-full 6 px-6 md:px-36 lg:px-40  justify-between">
+        <section className="lg:flex-1 grid place-content-center  lg:place-content-end border-b border-solid border-['rgba(56, 59, 75, 1)'] overflow-clip">
+          <picture>
+            <source
+              srcSet={
+                crewMembers
+                  ? crewMembers[currentCrewMember].images.webp
+                  : undefined
+              }
+              type="image/webp"
+            />
+            <img
+              src={
+                crewMembers
+                  ? crewMembers[currentCrewMember].images.png
+                  : undefined
+              }
+              alt={
+                crewMembers ? crewMembers[currentCrewMember].name : undefined
+              }
+              className={`mx-auto md:max-w-[75%] lg:max-w-[90%] object-cover `}
+            />
+          </picture>
         </section>
-        <section className="max-w-[614px] flex flex-col md:flex-col-reverse justify-center mx-auto md:items-center lg:items-start flex-grow  gap-2">
+        <section className="flex-0 max-w-[614px] flex flex-col md:flex-col-reverse justify-center md:justify-around lg:justify-between  mx-auto md:items-center lg:items-start flex-grow  gap-2">
           {/* 4 circles 10px by 10px */}
           <SmallToggle
             isActive={isActive}
             changeCrewMemberHandler={changeCrewMemberHandler}
           />
-          <div className="flex flex-col gap-2 ">
+          <div className="flex flex-col gap-4 lg:mt-40">
             <h3
               id="role"
               className="text-tertiary-100 opacity-50 uppercase font-serif text-center lg:text-start lg:text-[32px]"
@@ -57,7 +70,7 @@ export const Crew = () => {
             </h2>
             <p
               id="bio"
-              className="text-secondary text-[15px] md:text-base  font-sans2 leading-6 pb-14  text-center lg:text-start lg:text-lg"
+              className="text-secondary text-[15px] md:text-base  font-sans2 leading-6 text-center lg:text-start lg:text-lg lg:mt-4"
             >
               {crewMembers && crewMembers[currentCrewMember].bio}
             </p>
