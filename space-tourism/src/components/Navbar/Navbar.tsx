@@ -33,7 +33,7 @@ export const Navbar = () => {
         </ul>
       </nav>
       <nav
-        className={`absolute  top-0 right-0 z-10 transform transition  duration-100 ease-in-out sm:hidden ${
+        className={`absolute  top-0 right-0 z-10  sm:hidden ${
           isOpen && 'backdrop-blur-2xl'
         }  flex w-4/5 flex-col items-end justify-center gap-16  text-tertiary-100`}
       >
@@ -43,7 +43,7 @@ export const Navbar = () => {
           className="mt-8 flex h-6 flex-col justify-center gap-[6px] pr-6"
         >
           <div
-            className={`ease h-[3px] w-6  transform bg-secondary transition duration-300 ${
+            className={`h-[3px] w-6 transform  bg-secondary transition duration-300 ease-in-out ${
               isOpen && 'translate-y-[9px] rotate-45'
             }`}
           ></div>
@@ -59,7 +59,7 @@ export const Navbar = () => {
           ></div>
         </button>
         {isOpen && (
-          <ul className="ease flex min-h-screen transform flex-col  gap-8 self-start  pl-8 transition duration-100 sm:hidden">
+          <ul className="flex min-h-screen transform flex-col gap-8  self-start pl-8  transition duration-300 ease-in-out sm:hidden">
             {navbarItems.map((item, index) => (
               <li key={index} className={` h-full tracking-[2.7px]`}>
                 <Link
